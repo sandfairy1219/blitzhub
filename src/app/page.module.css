@@ -1,0 +1,40 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  padding-top: 20px; /* Adjust this value to move the elements up */
+}
+
+.page h1 {
+  margin: 10px;
+}
+
+.container {
+  border: 2px solid #000; /* Add a border to the container */
+  padding: 20px; /* Add some padding inside the container */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  margin-top: 50px; /* Add margin-top to move the container down */
+  display: flex; /* Ensure the image and input are aligned */
+  align-items: center; /* Vertically center the image and input */
+}
+.container1 {
+  border: 2px solid #000; /* Add a border to the container */
+  padding: 20px; /* Add some padding inside the container */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  margin-top: 200px; /* Add margin-top to move the container down */
+  display: flex; /* Ensure the image and input are aligned */
+  align-items: center; /* Vertically center the image and input */
+}
+
+.container input {
+  margin: 10px;
+  width: 250px; /* Match the width of the image */
+  height: 50px; /* Match the height of the image */
+}
+.container1 div {
+  margin-right: 10px; /* Add space between the span and the select element */
+  margin-left: 10px; /* Add space between the span and the select element */
+}
+
