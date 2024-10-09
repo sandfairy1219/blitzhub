@@ -3,29 +3,63 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 40vh;
-  padding-top: 20px; /* Adjust this value to move the elements up */
+  height: 50vh;
+  padding-top: 110px; /* Adjust this value to move the elements up */
 }
 
 .page h1 {
-  margin: 10px;
+  margin: 80px;
+
 }
 
 .container {
   border: 2px solid #000; /* Add a border to the container */
   padding: 20px; /* Add some padding inside the container */
   border-radius: 10px; /* Optional: Add rounded corners */
-  margin-top: 50px; /* Add margin-top to move the container down */
+  margin: 40px; /* Add margin-top to move the container down */
   display: flex; /* Ensure the image and input are aligned */
   align-items: center; /* Vertically center the image and input */
+  
 }
 .container1 {
   border: 2px solid #000; /* Add a border to the container */
   padding: 20px; /* Add some padding inside the container */
   border-radius: 10px; /* Optional: Add rounded corners */
-  margin-top: 200px; /* Add margin-top to move the container down */
+  margin-top: 30px; /* Add margin-top to move the container down */
   display: flex; /* Ensure the image and input are aligned */
   align-items: center; /* Vertically center the image and input */
+  width: 1170px;
+  
+}
+
+.containerxp {
+  border: 2px solid #000; /* Add a border to the container */
+  padding: 20px; /* Add some padding inside the container */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  margin-top: 30px; /* Add margin-top to move the container down */
+  display: flex; /* Ensure the image and input are aligned */
+  align-items: center; /* Vertically center the image and input */
+  width: 1050px;
+}
+
+.containerpr {
+  border: 2px solid #000; /* Add a border to the container */
+  padding: 20px; /* Add some padding inside the container */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  margin-top: 30px; /* Add margin-top to move the container down */
+  display: flex; /* Ensure the image and input are aligned */
+  align-items: center; /* Vertically center the image and input */
+  width: 750px;
+}
+
+.containern {
+  border: 2px solid #000; /* Add a border to the container */
+  padding: 20px; /* Add some padding inside the container */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  margin-top: 30px; /* Add margin-top to move the container down */
+  display: flex; /* Ensure the image and input are aligned */
+  align-items: center; /* Vertically center the image and input */
+  width: 1050px;
 }
 
 .container input {

@@ -1,25 +1,103 @@
+'use client';
+
+import React, { useEffect } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
+import { calculatexp } from "./function.js";
 
 export default function Home() {
-  return (
 
+  useEffect(() => {
+    const calculate = document.getElementById("calculate");
+    if (calculate) {
+      calculate.addEventListener("click", () => {
+        calculatexp();
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    const nxp = document.getElementById("nxp");
+    const xdisplay = document.querySelector("#xdisplay");
+    if (nxp) {
+      nxp.addEventListener("change", () => {
+        if (nxp.value === "10x") {
+          xdisplay.innerHTML = "10";
+        }else if (nxp.value === "5x") {
+          xdisplay.innerHTML = "5";
+        }else if (nxp.value === "4x") {
+          xdisplay.innerHTML = "4";
+        }else if (nxp.value === "3x") {
+          xdisplay.innerHTML = "3";
+        }else if (nxp.value === "0") {
+          xdisplay.innerHTML = "n";
+        }
+      });
+    }
+  }, []);
+
+
+  return (
     <div className={styles.page}>
       <h1 id="title">경험치 계산기</h1>
       <div className={styles.container1}>
+      <div className={styles.containerxp}>
         <Image 
-          src="https://raw.githubusercontent.com/tresabhi/blitzkit-assets/refs/heads/main/icons/boosters/battle-xp.webp" 
+          src="https://raw.githubusercontent.com/tresabhi/blitzkit-assets/main/icons/boosters/battle-xp.webp" 
           alt="CXP" 
           width={35} 
           height={50} 
-          />
+        />
         <div>경험치 부스터</div>
-        <select>
+        <select id="booster" >
           <option value="0">없음</option>
-          <option value="common">경험치 부스터 (일반) </option>
+          <option value="common">경험치 부스터 (일반)</option>
           <option value="rare">경험치 부스터 (희귀)</option>
           <option value="epic">경험치 부스터 (에픽)</option>
         </select>
+      </div>
+      <div className={styles.containerpr}>
+        <Image 
+          src="https://catoolwebdav-net-cdn.gcdn.co/catool/3e6f15d528ae683e19e1769f621c6c7d.png" 
+          alt="premium" 
+          width={70} 
+          height={70} 
+        />
+        <div>프리미엄 계정</div>
+        <input type="checkbox" id="premium" name="premium" value="premium" width='20px' height='20px' ></input>
+      </div>
+      
+
+      <div className={styles.containern}>
+      <div
+        style={{
+        width: '100px', // CSS 변수는 직접 값으로 대체
+        backgroundImage: 'url(https://i.imgur.com/7hDltb4.png)',
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        cursor: 'pointer',
+        fontSize: '25px',
+        color: 'white',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+      className="rt-Flex rt-r-ai-center rt-r-jc-center rt-r-pt-1 rt-r-pl-1 rt-r-w"
+      >
+      <span>
+      x<b id="xdisplay">n</b>
+      </span>
+      </div>
+        <div>경험치 n배 증서</div>
+        <select id="nxp" >
+          <option value="0">없음</option>
+          <option value="3x">3배</option>
+          <option value="4x">4배</option>
+          <option value="5x">5배</option>
+          <option value="10x">10배</option>
+        </select>
+      </div>
       </div>
       <div className={styles.container}>
         <Image 
@@ -27,8 +105,12 @@ export default function Home() {
           alt="CXP" 
           width={50} 
           height={50} 
-          />
-        <input id="averagexp" placeholder="평균 경험치 입력"></input>
+        />
+        <input id="averagexp" placeholder="경험치량 입력"></input>
+      </div>
+      <button type="button" className="btn btn-success" id="calculate"  >계산하기</button>
+      <div className={styles.container}>
+      <div id="totalxp" >총 경험치</div>
       </div>
     </div>
   );
