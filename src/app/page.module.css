@@ -28,8 +28,8 @@
   margin-top: 30px; /* Add margin-top to move the container down */
   display: flex; /* Ensure the image and input are aligned */
   align-items: center; /* Vertically center the image and input */
-  width: 1170px;
-  
+  width: 1135px;
+  flex-wrap: wrap;
 }
 
 .containerxp {
@@ -39,7 +39,8 @@
   margin-top: 30px; /* Add margin-top to move the container down */
   display: flex; /* Ensure the image and input are aligned */
   align-items: center; /* Vertically center the image and input */
-  width: 1050px;
+  width: 380px;
+  height: 90px;
 }
 
 .containerpr {
@@ -49,7 +50,8 @@
   margin-top: 30px; /* Add margin-top to move the container down */
   display: flex; /* Ensure the image and input are aligned */
   align-items: center; /* Vertically center the image and input */
-  width: 750px;
+  width: 250px;
+  height: 90px;
 }
 
 .containern {
@@ -59,7 +61,7 @@
   margin-top: 30px; /* Add margin-top to move the container down */
   display: flex; /* Ensure the image and input are aligned */
   align-items: center; /* Vertically center the image and input */
-  width: 1050px;
+  width: 400px;
 }
 
 .container input {
@@ -72,3 +74,49 @@
   margin-left: 10px; /* Add space between the span and the select element */
 }
 
+.containerbd input {
+  margin: 10px;
+}
+
+.containerbd svg {
+  margin: 10px;
+}
+
+.containerbd {
+  border: 2px solid #000; /* Add a border to the container */
+  padding: 20px; /* Add some padding inside the container */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  margin-top: 30px; /* Add margin-top to move the container down */
+  display: flex; /* Ensure the image and input are aligned */
+  align-items: center; /* Vertically center the image and input */
+  width: 200px;
+}
+.containerwin {
+  border: 2px solid #000; /* Add a border to the container */
+  padding: 20px; /* Add some padding inside the container */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  margin-top: 30px; /* Add margin-top to move the container down */
+  display: flex; /* Ensure the image and input are aligned */
+  align-items: center; /* Vertically center the image and input */
+  width: 250px;
+  
+}
+
+.containerwin input {
+  margin: 10px;
+}
+
+.containerfxp {
+  border: 2px solid #000; /* Add a border to the container */
+  padding: 20px; /* Add some padding inside the container */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  margin-top: 30px; /* Add margin-top to move the container down */
+  display: flex; /* Ensure the image and input are aligned */
+  align-items: center; /* Vertically center the image and input */
+  width: 250px;
+  
+}
+
+.containerfxp input {
+  margin: 10px;
+}

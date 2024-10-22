@@ -8,6 +8,7 @@ export function calculatexp() {
     const premium = document.getElementById("premium").checked;
     const averagexp = document.getElementById("averagexp").value;
     const nxp = document.getElementById("nxp").value;
+    const birthday = document.getElementById("birthday").checked;
     let totalxp = 0;
     if (booster === "common") {
         totalxp = 1.25 * averagexp;
@@ -29,6 +30,9 @@ export function calculatexp() {
         totalxp = 4 * totalxp;
     } else if (nxp === "3x") {
         totalxp = 3 * totalxp;
+    }
+    if (birthday) {
+        totalxp = 5 * totalxp;
     }
     document.getElementById("totalxp").innerHTML = "총 경험치: " + totalxp;
 }
