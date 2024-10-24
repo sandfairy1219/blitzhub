@@ -38,10 +38,11 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      <h1 id="title">경험치 계산기</h1>
-      
+    <h1 id="title" style={{ marginTop: '20px' }}>경험치 계산기</h1> {/* title 요소를 내려줌 */}      
       <div className={styles.container1}>
-      
+      <div className={styles.containertitle}>
+      <h3 style={{ display: 'block', marginBottom: '10px' }}>경험치 도구</h3> {/* container1의 맨 윗부분에 경험치도구 추가 */}    
+      </div> 
         <div className={styles.containerxp}>
           <Image 
             src="https://raw.githubusercontent.com/tresabhi/blitzkit-assets/main/icons/boosters/battle-xp.webp" 
@@ -111,16 +112,22 @@ export default function Home() {
           <input type="checkbox" id="birthday"></input>
         </div>
         
+
+        
+      </div>
+
+      <div className={styles.container2}>
+      <div className={styles.containertitle}>
+      <h3 style={{ display: 'block', marginBottom: '10px' }}>자유경험치 도구</h3> {/* container2의 맨 윗부분에 경험치 계산 추가 */}
+      </div>
+        <div className={styles.containerfxp}>
+          <span>자유경험치 계산하기</span>
+          <input type="checkbox" id="freexp"></input>
+        </div>
         <div className={styles.containerwin}>
           <span>승패 여부 (체크시 승리)</span>
           <input type="checkbox" id="win"></input>
         </div>
-
-        <div className={styles.containerfxp}>
-          <span>자유경험치 계산하기</span>
-          <input type="checkbox" id="lose"></input>
-        </div>
-        
       </div>
       
       <div className={styles.container}>
@@ -135,8 +142,10 @@ export default function Home() {
       
       <button type="button" className="btn btn-success" id="calculate">계산하기</button>
       
-      <div className={styles.container}>
-        <div id="totalxp">총 경험치</div>
+      <div className={styles.containertotal}>
+      <div id="totalxp">총 경험치</div>
+
+      <div id="totalfreexp" style={{ display: 'none' }}>총 자유경험치</div>
       </div>
     </div>
   );

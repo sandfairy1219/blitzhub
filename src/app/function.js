@@ -9,6 +9,15 @@ export function calculatexp() {
     const averagexp = document.getElementById("averagexp").value;
     const nxp = document.getElementById("nxp").value;
     const birthday = document.getElementById("birthday").checked;
+    const freexp = document.getElementById("freexp").checked;
+    const win = document.getElementById("win").checked;
+    if (freexp) {
+        const totalfreexp = document.getElementById("totalfreexp")
+        totalfreexp.style.display = "block";  
+    }else{
+        const totalfreexp = document.getElementById("totalfreexp")
+        totalfreexp.style.display = "none";  
+    }
     let totalxp = 0;
     if (booster === "common") {
         totalxp = 1.25 * averagexp;
@@ -34,5 +43,17 @@ export function calculatexp() {
     if (birthday) {
         totalxp = 5 * totalxp;
     }
+    
+    if(win){
+        let totalfxp = averagexp * 0.1492537313432836
+        totalfxp = Math.round(totalfxp);
+        document.getElementById("totalfreexp").innerHTML = "총 자유 경험치: " + totalfxp;
+    }else{
+        let totalfxp = averagexp * 0.05
+        totalfxp = Math.round(totalfxp);
+        document.getElementById("totalfreexp").innerHTML = "총 자유 경험치: " + totalfxp;
+
+    }
     document.getElementById("totalxp").innerHTML = "총 경험치: " + totalxp;
 }
+
