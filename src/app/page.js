@@ -48,6 +48,27 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="#">경험치 계산기</a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="https://wotb-simulator.vercel.app/">상자깡 시뮬레이터</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">테크트리 db</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
     <h1 id="title" style={{ marginTop: '20px' }}>경험치 계산기</h1> {/* title 요소를 내려줌 */}      
       <div className={styles.container1}>
       <div className={styles.containertitle}>

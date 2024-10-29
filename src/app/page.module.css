@@ -4,13 +4,13 @@
   justify-content: center;
   align-items: center;
   height: 50vh;
-  padding-top: 470px; /* Adjust this value to move the elements up */
+  padding-top: 530px; /* Adjust this value to move the elements up */
   padding-left: 100px;
   padding-right: 100px;
 }
 
 .page h1 {
-  margin: 30px;
+  margin: 20px;
 
 }
 
@@ -18,7 +18,7 @@
   border: 2px solid #000; /* Add a border to the container */
   padding: 20px; /* Add some padding inside the container */
   border-radius: 10px; /* Optional: Add rounded corners */
-  margin: 20px; /* Add margin-top to move the container down */
+  margin: 10px; /* Add margin-top to move the container down */
   display: flex; /* Ensure the image and input are aligned */
   align-items: center; /* Vertically center the image and input */
   
