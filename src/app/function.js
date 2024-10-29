@@ -9,15 +9,6 @@ export function calculatexp() {
     const averagexp = document.getElementById("averagexp").value;
     const nxp = document.getElementById("nxp").value;
     const birthday = document.getElementById("birthday").checked;
-    const freexp = document.getElementById("freexp").checked;
-    const win = document.getElementById("win").checked;
-    if (freexp) {
-        const totalfreexp = document.getElementById("totalfreexp")
-        totalfreexp.style.display = "block";  
-    }else{
-        const totalfreexp = document.getElementById("totalfreexp")
-        totalfreexp.style.display = "none";  
-    }
     let totalxp = 0;
     if (booster === "common") {
         totalxp = 1.25 * averagexp;
@@ -44,16 +35,35 @@ export function calculatexp() {
         totalxp = 5 * totalxp;
     }
     
-    if(win){
-        let totalfxp = averagexp * 0.1492537313432836
-        totalfxp = Math.round(totalfxp);
-        document.getElementById("totalfreexp").innerHTML = "총 자유 경험치: " + totalfxp;
-    }else{
-        let totalfxp = averagexp * 0.05
-        totalfxp = Math.round(totalfxp);
-        document.getElementById("totalfreexp").innerHTML = "총 자유 경험치: " + totalfxp;
-
-    }
     document.getElementById("totalxp").innerHTML = "총 경험치: " + totalxp;
 }
 
+export function calculatefreexp(){
+    console.log("calculating freexp");
+
+    const averagexp = document.getElementById("averagexp").value;
+    const win = document.getElementById("win").checked;
+    const fxpbooster = document.getElementById("fxpbooster").value;
+    const premium = document.getElementById("premium").checked;
+    const totalfreexp = document.getElementById("totalfreexp");
+
+    let totalfxp = 0;
+    if (win) {
+        totalfxp = averagexp * 0.1492537313432836;
+        totalfxp = Math.round(totalfxp);
+    } else {
+        totalfxp = averagexp * 0.05;
+        totalfxp = Math.round(totalfxp);
+    }
+    if (fxpbooster === "common") {
+        totalfxp = 1.5 * totalfxp;
+    } else if (fxpbooster === "rare") {
+        totalfxp = 3.5 * totalfxp;
+    } else if (fxpbooster === "epic") {
+        totalfxp = 5 * totalfxp;
+    }
+    if (premium) {
+        totalfxp = 1.5 * totalfxp;
+    }
+    totalfreexp.innerHTML = "총 자유 경험치: " + totalfxp;
+}

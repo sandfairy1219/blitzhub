@@ -5,6 +5,8 @@
   align-items: center;
   height: 50vh;
   padding-top: 470px; /* Adjust this value to move the elements up */
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .page h1 {
@@ -96,6 +98,10 @@
   margin-left: 10px; /* Add space between the span and the select element */
 }
 
+.container2 div {
+  margin-right: 10px; /* Add space between the span and the select element */
+  margin-left: 10px; /* Add space between the span and the select element */
+}
 .containerbd input {
   margin: 10px;
 }
@@ -118,9 +124,10 @@
   padding: 20px; /* Add some padding inside the container */
   border-radius: 10px; /* Optional: Add rounded corners */
   margin-top: 30px; /* Add margin-top to move the container down */
+  margin-right: 20px;
   display: flex; /* Ensure the image and input are aligned */
   align-items: center; /* Vertically center the image and input */
-  width: 250px;
+  width: 270px;
   
 }
 
@@ -136,10 +143,21 @@
   margin-right: 20px;
   display: flex; /* Ensure the image and input are aligned */
   align-items: center; /* Vertically center the image and input */
-  width: 250px;
+  width: 270px;
   
 }
 
+.containerfxpb {
+  border: 2px solid #000; /* Add a border to the container */
+  padding: 20px; /* Add some padding inside the container */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  margin-top: 30px; /* Add margin-top to move the container down */
+  margin-right: 20px;
+  display: flex; /* Ensure the image and input are aligned */
+  align-items: center; /* Vertically center the image and input */
+  width: 450px;
+  
+}
 .containerfxp input {
   margin: 10px;
 }

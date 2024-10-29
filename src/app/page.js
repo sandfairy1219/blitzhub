@@ -3,15 +3,25 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
-import { calculatexp } from "./function.js";
+import { calculatexp, calculatefreexp } from "./function.js";
+
 
 export default function Home() {
 
   useEffect(() => {
     const calculate = document.getElementById("calculate");
+    const freexp = document.getElementById("freexp");
+    const totalfreexp = document.getElementById("totalfreexp");
+
     if (calculate) {
       calculate.addEventListener("click", () => {
         calculatexp();
+        if (freexp && freexp.checked) {
+          totalfreexp.style.display = "block";
+          calculatefreexp();
+        } else {
+          totalfreexp.style.display = "none";
+        }
       });
     }
   }, []);
@@ -127,6 +137,21 @@ export default function Home() {
         <div className={styles.containerwin}>
           <span>승패 여부 (체크시 승리)</span>
           <input type="checkbox" id="win"></input>
+        </div>
+        <div className={styles.containerfxpb}>
+          <Image 
+            src="https://raw.githubusercontent.com/tresabhi/blitzkit-assets/main/icons/boosters/battle-xp.webp" 
+            alt="CXP" 
+            width={35} 
+            height={50} 
+          />
+          <div>자유 경험치 부스터</div>
+          <select id="fxpbooster" >
+            <option value="0">없음</option>
+            <option value="common">자유 경험치 부스터 (일반)</option>
+            <option value="rare">자유 경험치 부스터 (희귀)</option>
+            <option value="epic">자유 경험치 부스터 (에픽)</option>
+          </select>
         </div>
       </div>
       
