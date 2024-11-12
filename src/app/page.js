@@ -2,9 +2,8 @@
 
 import React, { useEffect } from "react";
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./styles/page.module.css";
 import { calculatexp, calculatefreexp } from "./function.js";
-
 
 export default function Home() {
 
@@ -63,7 +62,7 @@ export default function Home() {
           <a className="nav-link" href="https://wotb-simulator.vercel.app/">상자깡 시뮬레이터</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">테크트리 db</a>
+          <a className="nav-link" href="/db">테크트리 db</a>
         </li>
       </ul>
     </div>
