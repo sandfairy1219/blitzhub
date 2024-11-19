@@ -105,6 +105,8 @@ export default function Home() {
           <select id="booster" >
             <option value="0">없음</option>
             <option value="common">경험치 부스터 (일반)</option>
+            <option value="rare">경험치 부스터 (희귀)</option>
+            <option value="epic">경험치 부스터 (에픽)</option>
           </select>
         </div>
         

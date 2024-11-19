@@ -20,6 +20,14 @@ export default function DbPage() {
         <button className={styles.button}>중국</button>
         <button className={styles.button}>프랑스</button>
         <button className={styles.button}>유럽</button>
+        <div></div>
+
+
+
+
+
+        
     </div>
+    
   );
 }
