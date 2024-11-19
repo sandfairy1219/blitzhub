@@ -11,7 +11,7 @@
   background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20211027/pngtree-abstract-web-polygonal-banner-image_912811.png'); /* 배경 이미지 설정 */
   background-size: cover; /* 이미지 크기를 화면에 맞춤 */
   background-position: center; /* 이미지 위치를 중앙으로 설정 */
-  background-repeat: no-repeat; /* 이미지 반복 방지 */
+  background-repeat: repeat; /* 이미지 반복 방지 */
 }
 
 
