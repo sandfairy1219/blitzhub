@@ -3,11 +3,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 120vh;
   padding-top: 530px; /* Adjust this value to move the elements up */
   padding-left: 100px;
   padding-right: 100px;
+  font-family: Arial, sans-serif;
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20211027/pngtree-abstract-web-polygonal-banner-image_912811.png'); /* 배경 이미지 설정 */
+  background-size: cover; /* 이미지 크기를 화면에 맞춤 */
+  background-position: center; /* 이미지 위치를 중앙으로 설정 */
+  background-repeat: no-repeat; /* 이미지 반복 방지 */
 }
+
 
 .page h1 {
   margin: 20px;
@@ -198,6 +204,7 @@
   color: white;
   border-radius: 5px;
   transition: background-color 0.3s;
+  margin: 5px;
 }
 
 .button:hover {
@@ -212,4 +219,27 @@
   height: 20px;
   margin-right: 5px;
   fill: yellow;
+}
+
+.usatanks {
+  border: 2px solid #000; /* Add a border to the container */
+  padding: 20px; /* Add some padding inside the container */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  margin-top: 10px; /* Add margin-top to move the container down */
+  display: flex; /* Ensure the image and input are aligned */
+  align-items: center; /* Vertically center the image and input */
+  width: 1135px;
+  flex-wrap: wrap;
+}
+
+.techtreecontainer{
+  border: 2px solid #000; /* Add a border to the container */
+  padding: 20px; /* Add some padding inside the container */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  margin-top: 30px; /* Add margin-top to move the container down */
+  display: flex; /* Ensure the image and input are aligned */
+  align-items: center; /* Vertically center the image and input */
+  width: 250px;
+  height: 90px;
+  margin: 10px;
 }

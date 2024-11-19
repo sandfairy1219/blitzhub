@@ -22,11 +22,38 @@ export default function DbPage() {
         <button className={styles.button}>유럽</button>
         <div></div>
 
+        <div className={styles.usatanks}>
+
+          <div className={styles.techtreecontainer}>
+            <div>T110E4 트리</div>
+          </div>
+          <div className={styles.techtreecontainer}>
+            <div>T110E3 트리</div>    
+          </div>
+          <div className={styles.techtreecontainer}>
+            <div>T110E5 트리</div>
+          </div>
+          <div className={styles.techtreecontainer}>
+            <div>M-VI-Yoh 트리</div>
+          </div>
+          <div className={styles.techtreecontainer}>
+            <div>M48 Patton 트리</div>
+          </div>
+          <div className={styles.techtreecontainer}>
+            <div>T57 Heavy 트리</div>
+          </div>
+          <div className={styles.techtreecontainer}>
+            <div>Sheridan 트리</div>
+          </div>
+        </div>
+
+        <div className='germantanks'>
+
+          </div>
 
 
 
 
-        
     </div>
     
   );
