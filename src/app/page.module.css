@@ -1,61 +1,16 @@
-@media (max-width: 768px) {
-  .page {
-    padding-top: 100px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .container, .container1 {
-    flex-direction: column;
-    width: 100%;
-    padding: 10px;
-  }
-}
-
-@media (max-width: 1080px) {
-  .page {
-    padding-top: 80px;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .container, .container1 {
-    flex-direction: column;
-    width: 100%;
-    padding: 15px;
-  }
-}
-
 .page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 50vh;
-}
-
-/* 모바일 화면 비율일 때 컨테이너 안의 내용들을 세로로 나열 */
-@media (max-width: 768px) {
-  .container, .container1 {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
-  padding-top: 530px; /* Adjust this value to move the elements up */
+  padding-top: 600px; /* Adjust this value to move the elements up */
   padding-left: 100px;
   padding-right: 100px;
 }
 
 .page h1 {
   margin: 20px;
-
 }
 
 .container {
@@ -65,8 +20,28 @@
   margin: 10px; /* Add margin-top to move the container down */
   display: flex; /* Ensure the image and input are aligned */
   align-items: center; /* Vertically center the image and input */
-  
 }
+
+.container1 {
+  border: 2px solid #000; /* Add a border to the container */
+  padding: 20px; /* Add some padding inside the container */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  margin-top: 10px; /* Add margin-top to move the container down */
+}
+
+/* 모바일 모드 스타일 */
+.mobileMode {
+  padding-top: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.mobileMode .container, .mobileMode .container1 {
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+}
+
 .container1 {
   border: 2px solid #000; /* Add a border to the container */
   padding: 20px; /* Add some padding inside the container */

@@ -45,38 +45,60 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    // Bootstrap JavaScript 파일 추가
+    const script = document.createElement('script');
+    script.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  const handleToggle = () => {
+    const button = document.getElementById('mobileModeButton');
+    const page = document.querySelector(`.${styles.page}`);
+    button.classList.toggle('btn-primary');
+    button.classList.toggle('btn-secondary');
+    page.classList.toggle(styles.mobileMode);
+  };
+
   return (
     <div className={styles.page}>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="#">경험치 계산기</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="https://wotb-simulator.vercel.app/">상자깡 시뮬레이터</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/db">테크트리 db</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-    <h1 id="title" style={{ marginTop: '20px' }}>경험치 계산기</h1> {/* title 요소를 내려줌 */}      
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">Navbar</a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+              <a className="nav-link active" aria-current="page" href="#">Home</a>
+              <a className="nav-link" href="#">Features</a>
+              <a className="nav-link" href="#">Pricing</a>
+              <button
+                type="button"
+                id="mobileModeButton"
+                className="btn btn-primary"
+                onClick={handleToggle}
+              >
+                모바일 모드
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <h1 id="title" style={{ marginTop: '20px' }}>경험치 계산기</h1> {/* title 요소를 내려줌 */}
       <div className={styles.container1}>
-      <div className={styles.containertitle}>
-      <h3 style={{ display: 'block', marginBottom: '10px' }}>경험치 도구</h3> {/* container1의 맨 윗부분에 경험치도구 추가 */}    
-      </div> 
+        <div className={styles.containertitle}>
+          <h3 style={{ display: 'block', marginBottom: '10px' }}>경험치 도구</h3> {/* container1의 맨 윗부분에 경험치도구 추가 */}
+        </div>
         <div className={styles.containerxp}>
-          <Image 
-            src="https://raw.githubusercontent.com/tresabhi/blitzkit-assets/main/icons/boosters/battle-xp.webp" 
-            alt="CXP" 
+          <Image
+            src="https://raw.githubusercontent.com/tresabhi/blitzkit-assets/main/icons/boosters/battle-xp.webp"
+            alt="CXP"
             width={35} 
             height={50} 
           />
@@ -84,8 +106,6 @@ export default function Home() {
           <select id="booster" >
             <option value="0">없음</option>
             <option value="common">경험치 부스터 (일반)</option>
-            <option value="rare">경험치 부스터 (희귀)</option>
-            <option value="epic">경험치 부스터 (에픽)</option>
           </select>
         </div>
         
