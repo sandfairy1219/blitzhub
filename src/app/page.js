@@ -1,11 +1,14 @@
 'use client';
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import styles from "./styles/page.module.css";
+import desktopStyles from "./styles/page.module.css";
+import mobileStyles from "./styles/page.mobile.module.css";
 import { calculatexp, calculatefreexp } from "./function.js";
 
 export default function Home() {
+  const [isMobileMode, setIsMobileMode] = useState(false);
+  const styles = isMobileMode ? mobileStyles : desktopStyles;
 
   useEffect(() => {
     const calculate = document.getElementById("calculate");
@@ -58,11 +61,7 @@ export default function Home() {
   }, []);
 
   const handleToggle = () => {
-    const button = document.getElementById('mobileModeButton');
-    const page = document.querySelector(`.${styles.page}`);
-    button.classList.toggle('btn-primary');
-    button.classList.toggle('btn-secondary');
-    page.classList.toggle(styles.mobileMode);
+    setIsMobileMode(!isMobileMode);
   };
 
   return (
@@ -76,12 +75,12 @@ export default function Home() {
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
               <a className="nav-link active" aria-current="page" href="#">Home</a>
-              <a className="nav-link" href="#">Features</a>
-              <a className="nav-link" href="#">Pricing</a>
+              <a className="nav-link" href="/db">db</a>
+              <a className="nav-link" href="https://wotb-simulator.vercel.app/">상자깡 시뮬레이터</a>
               <button
                 type="button"
                 id="mobileModeButton"
-                className="btn btn-primary"
+                className={`btn ${isMobileMode ? 'btn-secondary' : 'btn-primary'}`}
                 onClick={handleToggle}
               >
                 모바일 모드
@@ -171,6 +170,9 @@ export default function Home() {
       <h3 style={{ display: 'block', marginBottom: '10px' }}>자유경험치 도구</h3> {/* container2의 맨 윗부분에 경험치 계산 추가 */}
       </div>
         <div className={styles.containerfxp}>
+          <svg className={styles.starIcon} viewBox="0 0 24 24">
+           <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.4 8.168L12 18.896l-7.334 3.869 1.4-8.168L.132 9.21l8.2-1.192z"/>
+          </svg>
           <span>자유경험치 계산하기</span>
           <input type="checkbox" id="freexp"></input>
         </div>

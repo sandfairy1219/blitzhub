@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 80vh;
   padding-top: 530px; /* Adjust this value to move the elements up */
   padding-left: 100px;
   padding-right: 100px;
@@ -206,4 +206,10 @@
 
 .dbtitle{
   text-align: center;
+}
+.star-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  fill: yellow;
 }
