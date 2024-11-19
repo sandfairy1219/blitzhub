@@ -12,6 +12,36 @@
   }
 }
 
+@media (max-width: 1080px) {
+  .page {
+    padding-top: 80px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .container, .container1 {
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+/* 모바일 화면 비율일 때 컨테이너 안의 내용들을 세로로 나열 */
+@media (max-width: 768px) {
+  .container, .container1 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .page {
   display: flex;
   flex-direction: column;
